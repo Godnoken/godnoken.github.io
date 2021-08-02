@@ -2,7 +2,7 @@ import './App.scss';
 import codewars from "./images/codewars.png";
 import twitter from "./images/twitter.png";
 import codepen from "./images/codepen.png";
-import linkedin from "./images/codepen.png";
+import linkedin from "./images/linkedin.png";
 import downarrow from "./images/downarrow.png";
 import downarrowactive from "./images/downarrowactive.png";
 import pomodoro from "./images/pomodoro.png";
@@ -12,14 +12,28 @@ import drum from "./images/drum.png";
 
 function App() {
 
+  const handleSubmit = () => {
+    window.location.href = "mailto:support@example.com?subject=SendMail&body=Description"
+    //window.open("mailto:you@youraddress.com");
+  }
 
   const handleContactArrow = () => {
     const contactArrow = document.getElementById("contact-arrow");
+    const contactForm = document.getElementById("contact-form");
+    console.log(contactArrow.style.animation);
 
     if (contactArrow.className === "active") {
-      contactArrow.src = downarrow;
+      setTimeout(() => {
+        contactForm.style.display = "none";
+      }, 1000);
+      contactForm.style.animation = "ContactFormInactive 1s forwards";
+      contactArrow.style.animation ="ContactCloseAnimation 1s forwards";
       contactArrow.classList.remove("active");
+      contactArrow.src = downarrow;
     } else {
+      contactForm.style.display = "flex";
+      contactForm.style.animation = "ContactFormActive 1s forwards";
+      contactArrow.style.animation ="ContactOpenAnimation 1s forwards";
       contactArrow.classList.add("active");
       contactArrow.src = downarrowactive;
     }
@@ -29,6 +43,7 @@ function App() {
     <main id="app-container">
       <section id="sidebar">
         <nav>
+        <a href="#hero"><p>Home</p></a>
           <a href="#projects"><p>Projects</p></a>
           <a href="#skills"><p>Skills</p></a>
           <a href="#about"><p>About</p></a>
@@ -42,6 +57,12 @@ function App() {
         <div id="lets-talk">Let's talk.</div>
         <div id="contact-container">
           <img id="contact-arrow" onClick={handleContactArrow} src={downarrow} alt="arrow that shows contact form when clicked" />
+          <form id="contact-form" encType="text/html" onSubmit={handleSubmit}>
+            <input className="input-fields" type="text" placeholder="Your name"/>
+            <input className="input-fields" type="email" placeholder="Email"/>
+            <textarea></textarea>
+            <input id="submit" type="submit" value="Swoosh!"/>
+          </form>
         </div>
       </section>
       <section id="hero">
