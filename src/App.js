@@ -1,4 +1,5 @@
 import './App.scss';
+import emailjs from "emailjs-com";
 import codewars from "./images/codewars.png";
 import twitter from "./images/twitter.png";
 import codepen from "./images/codepen.png";
@@ -12,15 +13,39 @@ import drum from "./images/drum.png";
 
 function App() {
 
-  const handleSubmit = () => {
-    window.location.href = "mailto:support@example.com?subject=SendMail&body=Description"
-    //window.open("mailto:you@youraddress.com");
+  // Sends email from user to my email address and resets input fields
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    emailjs.sendForm('service_0w03a0b', 'template_yja7krc', "#contact-form", "user_AGoFRucRZPXNbAoZ3aGIk")
+    .then((result) => {
+      console.log(result.text);
+      emailSentAnimation();
+
+    }, (error) => {
+      console.log(error.text);
+    });
+
+    document.querySelector("textarea").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("name").value = "";
   }
 
+  // Tells user when email sends successfully
+  const emailSentAnimation = () => {
+    document.getElementById("email-successful").animate([
+      {easing: "ease-in"},
+      {opacity: "100%"},
+      {easing: "ease-out"}
+    ], {duration: 5000})
+    document.getElementById("email-successful").style.display = "block";
+    setTimeout(() => document.getElementById("email-successful").style.display = "none", 5000);
+  }
+
+  // Animates arrow and contact form. Makes form visible & useable.
   const handleContactArrow = () => {
     const contactArrow = document.getElementById("contact-arrow");
     const contactForm = document.getElementById("contact-form");
-    console.log(contactArrow.style.animation);
 
     if (contactArrow.className === "active") {
       setTimeout(() => {
@@ -52,15 +77,16 @@ function App() {
           <a href="https://www.codewars.com/users/Godnoken/completed_solutions" target="_blank" rel="noreferrer"><img src={codewars} alt="codewars link" /></a>
           <a href="https://codepen.io/Godnoken/pens/public" target="_blank" rel="noreferrer"><img src={codepen} alt="codepen link" /></a>
           <a href="https://twitter.com/SebOjefors" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter link" /></a>
-          <a href=""><img src={linkedin} alt="linkedin link" /></a>
+          <a href="_blank" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin link" /></a>
         </div>
         <div id="lets-talk">Let's talk.</div>
         <div id="contact-container">
+          <p id="email-successful">Emailed! You'll hear from me soon.</p>
           <img id="contact-arrow" onClick={handleContactArrow} src={downarrow} alt="arrow that shows contact form when clicked" />
-          <form id="contact-form" encType="text/html" onSubmit={handleSubmit}>
-            <input className="input-fields" type="text" placeholder="Your name"/>
-            <input className="input-fields" type="email" placeholder="Email"/>
-            <textarea></textarea>
+          <form id="contact-form" onSubmit={handleSubmit}>
+            <input id="name" className="input-fields" type="text" placeholder="Name" name="user_name" required/>
+            <input id="email" className="input-fields" type="email" placeholder="Email" name="user_email" required/>
+            <textarea placeholder="Message" name="message" required></textarea>
             <input id="submit" type="submit" value="Swoosh!"/>
           </form>
         </div>

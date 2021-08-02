@@ -8,7 +8,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin: 0;
 }
 
@@ -46,7 +46,6 @@ h1, h2, h3, h4 {
     }
     
     p {
-      margin: 0px;
       font-size: 2rem;
     }
   }
@@ -78,10 +77,21 @@ h1, h2, h3, h4 {
     flex-direction: column;
     align-items: center;
 
-    img {
+    #email-successful {
+      display: none;
+      position: absolute;
+      opacity: 0%;
+      font-size: 3rem;
+      color: white;
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    #contact-arrow {
       width: 5rem;
       height: 5rem;
       padding: 4rem;
+      user-select: none;
     }
 
     #contact-form {
