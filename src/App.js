@@ -172,19 +172,19 @@ function App() {
       <section id="projects">
         <div id="projects-container">
           <div className="card">
-            <img src={pomodoro} alt="Pomodoro app"/>
+            <img src={pomodoro} alt="Pomodoro app" />
             <p>Pomodoro</p>
           </div>
           <div className="card">
-          <img src={drum} alt="Drum machine app"/>
+            <img src={drum} alt="Drum machine app" />
             <p>Drum Machine</p>
           </div>
           <div className="card">
-          <img src={quotes} alt="Quotes machine app"/>
+            <img src={quotes} alt="Quotes machine app" />
             <p>Quotes Machine</p>
           </div>
           <div className="card">
-          <img src={calculator} alt="Calculator app"/>
+            <img src={calculator} alt="Calculator app" />
             <p>Calculator</p>
           </div>
         </div>
@@ -241,8 +241,8 @@ function App() {
         <a id="contact-me" href="#sidebar">
           Want to contact me?
           <img src={downarrowround}></img>
-          </a>
-        
+        </a>
+
       </section>
     </main>
   );
