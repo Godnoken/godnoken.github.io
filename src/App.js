@@ -85,7 +85,6 @@ function App() {
 
   return (
     <main id="app-container">
-      <title>Sebastian Öjefors</title>
       <section id="sidebar">
         <nav>
           <a href="#hero">
