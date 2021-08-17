@@ -83,6 +83,10 @@ function App() {
     }
   };
 
+  React.useEffect(() => {
+    document.tile = "Sebastian Öjefors";
+  }, [])
+
   return (
     <main id="app-container">
       <section id="sidebar">
