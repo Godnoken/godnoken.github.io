@@ -167,34 +167,21 @@ function App() {
       </section>
       <section id="projects">
         <div id="projects-container">
-          <div className="card" id="pomodoro">
-            <div className="card-img-one"></div>
-            <div className="card-info">
-              <p>testesttest</p>
-              <div className="source-code-button"></div>
-            </div>
+          <div className="card">
+            <img src={pomodoro} alt="Pomodoro app"/>
+            <p>Pomodoro</p>
           </div>
-          <div className="card" id="drum-machine">
-            <div className="card-info">
-
-              <p></p>
-              <div className="source-code-button"></div>
-            </div>
-            <div className="card-img-two"></div>
+          <div className="card">
+          <img src={drum} alt="Drum machine app"/>
+            <p>Drum Machine</p>
           </div>
-          <div className="card" id="calculator">
-            <div className="card-img-one"></div>
-            <div className="card-info">
-              <p></p>
-              <div className="source-code-button"></div>
-            </div>
+          <div className="card">
+          <img src={quotes} alt="Quotes machine app"/>
+            <p>Quotes Machine</p>
           </div>
-          <div className="card" id="quotes">
-            <div className="card-info">
-              <p></p>
-              <div className="source-code-button"></div>
-            </div>
-            <div className="card-img-two"></div>
+          <div className="card">
+          <img src={calculator} alt="Calculator app"/>
+            <p>Calculator</p>
           </div>
         </div>
       </section>
@@ -247,6 +234,7 @@ function App() {
             <span>white</span>.
           </p>
         </div>
+        <a id="contact-me" href="#sidebar">Want to contact me?</a>
       </section>
     </main>
   );
