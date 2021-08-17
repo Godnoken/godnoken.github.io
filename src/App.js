@@ -234,7 +234,11 @@ function App() {
             <span>white</span>.
           </p>
         </div>
-        <a id="contact-me" href="#sidebar">Want to contact me?</a>
+        <a id="contact-me" href="#sidebar">
+          Want to contact me?
+          <img src={downarrowround}></img>
+          </a>
+        
       </section>
     </main>
   );

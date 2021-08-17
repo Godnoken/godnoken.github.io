@@ -361,12 +361,21 @@ p {
     flex-direction: column;
 
     #contact-me {
-      display: block;
+      height: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
       font-size: 3.2rem;
       text-decoration: none;
       color: black;
       cursor: pointer;
       margin-top: 4rem;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 }
