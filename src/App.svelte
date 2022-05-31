@@ -1,25 +1,37 @@
-<script>
-	export let name;
+<script lang="ts">
+	import Tech from "./Tech.svelte";
+	import Me from "./Me.svelte";
+	import Contact from "./Contact.svelte";
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div class="top">
+
+	</div>
+	<div class="bottom">
+		<Contact />
+		<Me />
+		<Tech />
+	</div>
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		height: 100vh;
+		width: 100vw;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		background-color: #3E3E3E;
+		font-family: 'Montserrat Subrayada', sans-serif;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	.top {
+
+	}
+
+	.bottom {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	@media (min-width: 640px) {
