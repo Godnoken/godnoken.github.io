@@ -105,7 +105,6 @@
 
     .pause-globe {
         animation: pulseGlobe 0.9s infinite ease-in-out paused;
-        
     }
 
     .title {

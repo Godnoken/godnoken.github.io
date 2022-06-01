@@ -17,6 +17,11 @@
     on:introstart={() => (zIndex = "2")}
     on:outroend={() => (zIndex = "0")}
   >
+
+    <div class="content">
+        <h1 class="title">About me</h1>
+    </div>
+
   {#each {length: 4} as _, i}
     <div class="movingGlobe" style="--size: {i + 1}; --color: {color}"></div>
   {/each}
@@ -30,10 +35,25 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
     background-color: #72001c;
     transform-origin: 50% 100%;
     overflow: hidden;
     z-index: 1;
+  }
+
+  .content {
+      height: 80%;
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      color: white;
+      z-index: 1;
+  }
+
+  .title {
+    font-size: 48px;
   }
 
   .movingGlobe {

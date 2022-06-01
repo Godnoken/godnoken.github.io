@@ -17,6 +17,12 @@
     on:introstart={() => (zIndex = "2")}
     on:outroend={() => (zIndex = "0")}
   >
+
+  <div class="content">
+    <h1 class="title">Tech I have used</h1>
+  </div>
+
+
   {#each {length: 4} as _, i}
     <div class="movingGlobe" style="--size: {i + 1}; --color: {color}"></div>
   {/each}
@@ -30,10 +36,25 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #10a582;
+    display: flex;
+    background-color: #007e60;
     transform-origin: 100% 100%;
     overflow: hidden;
     z-index: 1;
+  }
+
+  .content {
+      height: 80%;
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      color: white;
+      z-index: 1;
+  }
+
+  .title {
+    font-size: 48px;
   }
 
   .movingGlobe {
