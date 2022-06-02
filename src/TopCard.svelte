@@ -62,8 +62,7 @@
         height: 100%;
         width: 100%;
         object-fit: fill;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+        border-radius: 10px 0 0 10px;
     }
 
     .content {
@@ -82,10 +81,6 @@
         font-size: 32px;
     }
 
-    .description {
-        font-family: 'Montserrat', sans-serif;
-    }
-
     .tech-stacks {
         display: flex;
         justify-content: center;
@@ -100,7 +95,6 @@
     }
 
     .link {
-        font-family: 'Montserrat', sans-serif;
         width: 30%;
         height: 80%;
         display: flex;
@@ -117,9 +111,81 @@
         animation: moveButton 0.5s forwards;
     }
 
-    @keyframes moveButton {
+    @keyframes -global-moveButton {
         100% {
             transform: translateY(-5px);
+        }
+    }
+
+    @media (max-height: 900px) {
+        .content {
+            padding: 0 16px;
+            row-gap: 8px;
+            font-size: 12px;
+            line-height: 1.1;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .link {
+            font-size: 14px;
+            border: 1px solid white;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .top-card {
+            width: 70%;
+            height: 90%;
+            flex-direction: column;
+        }
+
+        .img-container {
+            height: 40%;
+            width: 100%;
+        }
+
+        .img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .content {
+            height: 60%;
+            width: 100%;
+            row-gap: 12px;
+            padding-top: 14px;
+            line-height: 1.1;
+        }
+
+        .link {
+            border: 1px solid white;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .img-container {
+            height: 25%;
+        }
+
+        .content {
+            height: 75%;
+            line-height: 1;
+            row-gap: 6px;
+            padding: 4px 12px 0;
+            font-size: 14px;
+        }
+
+        :global(svg) {
+            height: 15px;
+            width: 15px;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .content {
+            font-size: 12px;
         }
     }
 </style>

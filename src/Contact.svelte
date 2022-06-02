@@ -2,29 +2,42 @@
   import { scale } from "svelte/transition";
 
   import BottomCard from "./BottomCard.svelte";
-  import { activeCard } from "./stores";
-  let title: string = "Contact";
+  import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
+  let title: string = "CONTACT";
   let left: string = "0px";
-  let color: string = "118 255 13"
+  let color: string = "118 255 13";
   let zIndex: string;
+  let handleActiveCard;
 </script>
 
-<BottomCard {title} {left} {zIndex} {color}/>
+<BottomCard
+  {title}
+  {left}
+  {zIndex}
+  {color}
+  bind:handleActiveCard
+/>
 {#if $activeCard === title}
   <div
     class="contact-container"
     transition:scale={{ duration: 500 }}
     on:introstart={() => (zIndex = "2")}
     on:outroend={() => (zIndex = "0")}
+    style="--mouseX: {$mouseX + 'px'}; --mouseY: {$mouseY + 'px'}"
   >
+    <div class="content">
+      <h1 class="title">Contact Me</h1>
+      {#if $windowWidth < 950}
+        <button on:click={handleActiveCard} class="go-back">Go back</button>
+      {/if}
+    </div>
 
-  <div class="content">
-    <h1 class="title">Contact Me</h1>
-  </div>
-
-  {#each {length: 4} as _, i}
-    <div class="movingGlobe" style="--size: {i + 1}; --color: {color};"></div>
-  {/each}
+    {#each { length: 5 } as _, i}
+      <div
+        class="movingGlobe"
+        style="--size: {i + 1}; --color: {color}; --windowWidth: {$windowWidth}"
+      />
+    {/each}
   </div>
 {/if}
 
@@ -37,29 +50,30 @@
     height: 100vh;
     display: flex;
     background-color: #306e00;
-    transform-origin: 0% 100%;
+    transform-origin: var(--mouseX) var(--mouseY);
     overflow: hidden;
     z-index: 1;
   }
 
   .content {
-      height: 80%;
-      width: 65%;
-      display: flex;
-      justify-content: center;
-      margin: auto;
-      color: white;
-      z-index: 1;
+    height: 80%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    z-index: 1;
   }
 
   .title {
     font-size: 48px;
+    text-align: center;
   }
 
   .movingGlobe {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: calc(var(--mouseY) - 50px);
+    left: calc(var(--mouseX) - 50px);
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -68,8 +82,14 @@
   }
 
   @keyframes movingGlobe {
-        100% {
-            transform: scale(calc(var(--size) * 10));
-        }
+    100% {
+      transform: scale(calc(var(--size) * (var(--windowWidth) / 100)));
     }
+  }
+
+  @media (max-width: 950px) {
+    .title {
+      font-size: 30px;
+    }
+  }
 </style>

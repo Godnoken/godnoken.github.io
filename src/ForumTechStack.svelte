@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <svg viewBox="0 0 128 128">
   <path
     fill="#E44D26"
@@ -61,9 +58,3 @@
     /></g
   >
 </svg>
-
-<style>
-  svg {
-    height: 35px;
-  }
-</style>
