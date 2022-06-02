@@ -172,7 +172,7 @@
     }
 
     .title {
-      font-size: 34px;
+      font-size: 20px;
     }
 
     :global(.go-back) {

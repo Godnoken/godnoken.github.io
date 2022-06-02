@@ -18,8 +18,6 @@
     carousel($currentIndex);
   });
 
-  //const windowWidth = window.innerWidth;
-
   function moveCarouselByArrows(index) {
     if (index === 1) {
       $xIn = $windowWidth;
@@ -89,7 +87,8 @@
 
 <style>
   main {
-    height: 100vh;
+    position: fixed;
+    height: 100%;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -101,7 +100,6 @@
     position: relative;
     height: 50vh;
     display: flex;
-    overflow: hidden;
   }
 
   .dot-container {
@@ -184,8 +182,8 @@
 
   @media (max-width: 450px) {
     .next, .prev {
-      padding: 0 6px 6px;
-      font-size: 60px;
+      padding: 0 4px 4px 2px;
+      font-size: 48px;
     }
   }
 </style>

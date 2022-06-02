@@ -47,7 +47,7 @@
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     background-color: #4b2624;
     transform-origin: var(--mouseX) var(--mouseY);
