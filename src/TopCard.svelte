@@ -8,6 +8,8 @@
     export let image: string;
     export let title: string;
     export let description: string;
+    export let codeUrl: string;
+    export let liveUrl: string;
     export let elementIndex: number;
 </script>
 
@@ -30,8 +32,8 @@
             <slot></slot>
         </div>
         <div class="link-container">
-            <a href="" target="_blank" class="link">Code</a>
-            <a href="" target="_blank" class="link">Live</a>
+            <a href={codeUrl} target="_blank" class="link">Code</a>
+            <a href={liveUrl} target="_blank" class="link">Live</a>
         </div>
     </div>
 </article>
@@ -135,10 +137,17 @@
         }
     }
 
+    @media (min-width: 1900px) {
+        .content {
+            font-size: 22px;
+        }
+    }
+
     @media (max-width: 950px) {
         .top-card {
-            width: 70%;
+            width: 75%;
             height: 90%;
+            margin: 16px auto auto;
             flex-direction: column;
         }
 
@@ -165,6 +174,10 @@
     }
 
     @media (max-width: 450px) {
+        .top-card {
+            
+        }
+
         .img-container {
             height: 25%;
         }

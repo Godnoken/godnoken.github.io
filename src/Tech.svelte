@@ -5,7 +5,7 @@
   import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
   let title: string = "TECH";
   let right: string = "0px";
-  let color: string = "13 255 198";
+  let color: string = "137 240 220";
   let zIndex: string;
   let handleActiveCard;
 </script>
@@ -49,7 +49,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: #007e60;
+    background-color: #182c28;
     transform-origin: var(--mouseX) var(--mouseY);
     overflow: hidden;
     z-index: 1;

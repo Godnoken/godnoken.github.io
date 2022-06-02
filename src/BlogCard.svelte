@@ -6,10 +6,12 @@
     let image: string = "./images/blog.png";
     let title: string = "Retro Blog";
     let description: string = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <br><br> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.";
+    let codeUrl: string = "https://github.com/Godnoken/developer-challenge-api";
+    let liveUrl: string = "https://mini-blog-letsgetchecked.herokuapp.com/blog";
     let elementIndex = 4;
 </script>
 
-<TopCard {bgColor} {image} {title} {description} {elementIndex}>
+<TopCard {bgColor} {image} {title} {description} {elementIndex} {codeUrl} {liveUrl}>
     <BlogTechStack />
 </TopCard>
 

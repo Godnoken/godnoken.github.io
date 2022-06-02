@@ -5,7 +5,7 @@
   import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
   let title: string = "ME";
   let left: string = "50%";
-  let color: string = "255 0 34";
+  let color: string = "240 121 115";
   let zIndex: string;
   let handleActiveCard;
 </script>
@@ -49,7 +49,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: #72001c;
+    background-color: #4b2624;
     transform-origin: var(--mouseX) var(--mouseY);
     overflow: hidden;
     z-index: 1;
