@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
+  import { activeCard, windowWidth, mouseX, mouseY, darkMode } from "./stores";
 
   export let title: string;
   export let left: string = "auto";
@@ -69,11 +69,12 @@
     margin: 14px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #171717;
+    background-color: var(--secondary-color);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     cursor: pointer;
+    transition: 0.6s;
   }
 
   .hover-globes {
@@ -142,10 +143,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid white 3px;
+    border: solid var(--accent-color) 3px;
     border-radius: 6px;
     font-size: 34px;
-    color: white;
+    color: var(--accent-color);
   }
 
   :global(.go-back:hover) {
@@ -176,8 +177,8 @@
     }
 
     :global(.go-back) {
-        width: 80%;
-        height: 75px;
+      width: 80%;
+      height: 75px;
     }
   }
 </style>

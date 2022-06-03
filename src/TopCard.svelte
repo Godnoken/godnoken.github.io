@@ -4,7 +4,6 @@
 
   import { xIn, xOut, currentIndex } from "./stores";
 
-  export let bgColor: string;
   export let image: string;
   export let title: string;
   export let description: string;
@@ -15,12 +14,9 @@
 
 {#if $currentIndex === elementIndex}
   <article
-    in:fly={{ easing: sineInOut, duration: 1000, x: $xIn }}
-    out:fly={{ easing: sineInOut, duration: 1000, x: $xOut }}
+    in:fly={{ easing: sineInOut, duration: 600, x: $xIn }}
+    out:fly={{ easing: sineInOut, duration: 600, x: $xOut }}
     class="top-card"
-    style="
-        --bgColor: {bgColor}
-    "
   >
     <figure class="img-container">
       <img src={image} alt="" class="img" />
@@ -51,9 +47,11 @@
     display: flex;
     margin: auto;
     border-radius: 10px;
-    background-color: var(--bgColor);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      transition: 0.6s;
   }
 
   .img-container {
@@ -62,7 +60,7 @@
   }
 
   .img {
-    height: 100%;
+    height: calc(100% - 3px);
     width: 100%;
     object-fit: fill;
     border-radius: 10px 0 0 10px;
@@ -74,12 +72,12 @@
     grid-template-rows: 1fr 3fr 0.5fr 1fr;
     row-gap: 18px;
     padding: 0 32px;
-    color: white;
+    color: var(--accent-color);
   }
 
   .description {
     overflow-y: scroll;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.767);
+    border-bottom: 1px solid rgba(165, 165, 165, 0.767);
     padding: 0 6px;
   }
 
@@ -89,7 +87,7 @@
   }
 
   .description::-webkit-scrollbar-thumb {
-    background: white;
+    background: var(--accent-color);
   }
 
   .description::-webkit-scrollbar-track-piece {
@@ -122,11 +120,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid white 1px;
+    border: solid var(--accent-color) 1px;
     border-radius: 6px;
     font-size: 22px;
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
   }
 
   .link:hover {

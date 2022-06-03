@@ -11,3 +11,5 @@ export const windowWidth = writable(0);
 
 export const mouseX = writable(0);
 export const mouseY = writable(0);
+
+export const darkMode = writable(true);

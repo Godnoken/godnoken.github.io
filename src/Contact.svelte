@@ -2,7 +2,7 @@
   import { scale } from "svelte/transition";
 
   import BottomCard from "./BottomCard.svelte";
-  import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
+  import { activeCard, windowWidth, mouseX, mouseY, darkMode } from "./stores";
   let title: string = "CONTACT";
   let left: string = "0px";
   let color: string = "133 240 127";
@@ -14,7 +14,7 @@
   {title}
   {left}
   {zIndex}
-  {color}
+  color={$darkMode ? color : "0 0 0"}
   bind:handleActiveCard
 />
 {#if $activeCard === title}
@@ -23,7 +23,7 @@
     transition:scale={{ duration: 500 }}
     on:introstart={() => (zIndex = "2")}
     on:outroend={() => (zIndex = "0")}
-    style="--mouseX: {$mouseX + 'px'}; --mouseY: {$mouseY + 'px'}"
+    style="--mouseX: {$mouseX + 'px'}; --mouseY: {$mouseY + 'px'}; --bgColor: {$darkMode ? "#203a1e" : "whitesmoke"}"
   >
     <div class="content">
       <h1 class="title">Contact Me</h1>
@@ -35,7 +35,7 @@
     {#each { length: 5 } as _, i}
       <div
         class="movingGlobe"
-        style="--size: {i + 1}; --color: {color}; --windowWidth: {$windowWidth}"
+        style="--size: {i + 1}; --color: {$darkMode ? color : "0 0 0"}; --windowWidth: {$windowWidth}"
       />
     {/each}
   </div>
@@ -49,7 +49,7 @@
     width: 100vw;
     height: 100%;
     display: flex;
-    background-color: #203a1e;
+    background-color: var(--bgColor);
     transform-origin: var(--mouseX) var(--mouseY);
     overflow: hidden;
     z-index: 1;
@@ -61,7 +61,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    color: white;
+    color: var(--accent-color);
     z-index: 1;
   }
 

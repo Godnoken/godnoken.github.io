@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import { xIn, xOut, currentIndex, windowWidth } from "./stores";
+  import { xIn, xOut, currentIndex, windowWidth, darkMode } from "./stores";
 
   import ForumCard from "./ForumCard.svelte";
   import MyLibraryCard from "./MyLibraryCard.svelte";
@@ -14,6 +14,7 @@
   let dotElements;
 
   onMount(() => {
+    readColorThemeOnLoad();
     dotElements = document.querySelectorAll<HTMLElement>(".dot");
     carousel($currentIndex);
   });
@@ -58,6 +59,34 @@
 
     dotElements[$currentIndex - 1].classList.add("active-dot");
   }
+
+  function readColorThemeOnLoad(): void {
+    if (
+      localStorage["theme"] === "darkMode" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("darkMode");
+      $darkMode = true;
+    } else {
+      document.documentElement.classList.remove("darkMode");
+      $darkMode = false;
+    }
+  }
+
+  function handleColorTheme(): void {
+    const html = document.documentElement;
+
+    if (html.classList.contains("darkMode")) {
+      html.classList.toggle("darkMode");
+      window.localStorage.setItem("theme", "lightMode");
+      $darkMode = false;
+    } else {
+      html.classList.toggle("darkMode");
+      window.localStorage.setItem("theme", "darkMode");
+      $darkMode = true;
+    }
+  }
 </script>
 
 <svelte:window bind:innerWidth={$windowWidth} />
@@ -83,17 +112,47 @@
     <Me />
     <Tech />
   </div>
+  <svg
+    on:click={handleColorTheme}
+    class="dark-light-mode-icon"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M7,17H4C2.38,17 0.96,15.74 0.76,14.14L0.26,11.15C0.15,10.3 0.39,9.5 0.91,8.92C1.43,8.34 2.19,8 3,8H9C9.83,8 10.58,8.35 11.06,8.96C11.17,9.11 11.27,9.27 11.35,9.45C11.78,9.36 12.22,9.36 12.64,9.45C12.72,9.27 12.82,9.11 12.94,8.96C13.41,8.35 14.16,8 15,8H21C21.81,8 22.57,8.34 23.09,8.92C23.6,9.5 23.84,10.3 23.74,11.11L23.23,14.18C23.04,15.74 21.61,17 20,17H17C15.44,17 13.92,15.81 13.54,14.3L12.64,11.59C12.26,11.31 11.73,11.31 11.35,11.59L10.43,14.37C10.07,15.82 8.56,17 7,17Z"
+    />
+  </svg>
 </main>
 
-<style>
+<style lang="scss">
+  $dark-primary-color: #323232;
+  $dark-secondary-color: #171717;
+  $dark-accent-color: white;
+
+  $light-primary-color: #bbbbbb;
+  $light-secondary-color: #cfcfcf;
+  $light-accent-color: black;
+
+  :root {
+    --primary-color: #{$light-primary-color};
+    --secondary-color: #{$light-secondary-color};
+    --accent-color: #{$light-accent-color};
+  }
+
+  :global(.darkMode) {
+    --primary-color: #{$dark-primary-color};
+    --secondary-color: #{$dark-secondary-color};
+    --accent-color: #{$dark-accent-color};
+  }
+
   main {
     position: fixed;
     height: 100%;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #222222;
+    background-color: var(--primary-color);
     font-family: "Montserrat", sans-serif;
+    transition: 0.6s;
   }
 
   .top {
@@ -133,7 +192,7 @@
     position: absolute;
     top: calc(50% - 44px);
     padding: 12px 16px 16px;
-    color: white;
+    color: var(--accent-color);
     font-size: 72px;
     transition: 0.6s ease;
     user-select: none;
@@ -143,21 +202,30 @@
     right: 0;
   }
 
-  .prev:hover,
-  .next:hover {
-    background-color: white;
-    color: black;
-  }
-
   .bottom {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .dark-light-mode-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    fill: var(--accent-color);
+    cursor: pointer;
+  }
+
   :global(svg) {
     height: 30px;
     width: 30px;
+  }
+
+  @media (hover: hover) {
+    .prev:hover,
+    .next:hover {
+      background-color: var(--secondary-color);
+    }
   }
 
   @media (max-width: 950px) {
@@ -181,7 +249,8 @@
   }
 
   @media (max-width: 450px) {
-    .next, .prev {
+    .next,
+    .prev {
       padding: 0 4px 4px 2px;
       font-size: 48px;
     }
