@@ -4,7 +4,7 @@
 
   import { xIn, xOut, currentIndex } from "./stores";
 
-  export let image: string;
+  export let image;
   export let title: string;
   export let description: string;
   export let codeUrl: string;
@@ -18,9 +18,9 @@
     out:fly={{ easing: sineInOut, duration: 600, x: $xOut }}
     class="top-card"
   >
-    <figure class="img-container">
-      <img src={image} alt="" class="img" />
-    </figure>
+    <picture class="img-container">
+      <img src={image} alt="Book library" class="img" />
+    </picture>
     <div class="content">
       <h1 class="title">{title}</h1>
       <p class="description">{@html description}</p>
@@ -64,6 +64,7 @@
     width: 100%;
     object-fit: fill;
     border-radius: 10px 0 0 10px;
+    transform: translateZ(0);
   }
 
   .content {
@@ -78,7 +79,7 @@
   .description {
     overflow-y: scroll;
     border-bottom: 1px solid rgba(165, 165, 165, 0.767);
-    padding: 0 6px;
+    padding: 6px;
   }
 
   .description::-webkit-scrollbar {
@@ -151,7 +152,6 @@
 
     .link {
       font-size: 14px;
-      border: 1px solid white;
     }
   }
 

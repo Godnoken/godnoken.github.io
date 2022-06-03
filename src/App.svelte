@@ -186,6 +186,10 @@
     background-color: rgb(102, 102, 102) !important;
   }
 
+  :global(a) {
+    color: gray;
+  }
+
   .prev,
   .next {
     cursor: pointer;
@@ -251,7 +255,7 @@
   @media (max-width: 450px) {
     .next,
     .prev {
-      padding: 0 4px 4px 2px;
+      padding: 0 5px 5px;
       font-size: 48px;
     }
   }
