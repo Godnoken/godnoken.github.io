@@ -128,8 +128,8 @@
   $dark-secondary-color: #171717;
   $dark-accent-color: white;
 
-  $light-primary-color: #bbbbbb;
-  $light-secondary-color: #cfcfcf;
+  $light-primary-color: #dddddd;
+  $light-secondary-color: #f1f1f1;
   $light-accent-color: black;
 
   :root {
