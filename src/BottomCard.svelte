@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { activeCard, windowWidth, mouseX, mouseY, darkMode } from "./stores";
+  import { activeCard, windowWidth, mouseX, mouseY } from "./stores";
 
   export let title: string;
   export let left: string = "auto";

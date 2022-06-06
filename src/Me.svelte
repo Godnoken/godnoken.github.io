@@ -53,6 +53,7 @@
     transform-origin: var(--mouseX) var(--mouseY);
     overflow: hidden;
     z-index: 1;
+    transition: background-color 0.6s;
   }
 
   .content {
@@ -90,6 +91,12 @@
   @media (max-width: 950px) {
     .title {
       font-size: 30px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title {
+      font-size: 22px;
     }
   }
 </style>
