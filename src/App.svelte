@@ -289,6 +289,15 @@
     width: 40px;
   }
 
+  :global(.icon) {
+    fill: var(--accent-color);
+  }
+
+  :global(.icon:hover) {
+    transition: opacity 0.5s;
+    opacity: 0.5;
+  }
+
   @media (hover: hover) {
     .prev:hover,
     .next:hover {

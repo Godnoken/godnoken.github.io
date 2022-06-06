@@ -44,7 +44,7 @@
   {title}
   {left}
   {zIndex}
-  color={$darkMode ? color : "0 0 0"}
+  color={$darkMode ? color : "128 128 128"}
   bind:handleActiveCard
 />
 {#if $activeCard === title}
@@ -122,7 +122,7 @@
         class="movingGlobe"
         style="--size: {i + 1}; --color: {$darkMode
           ? color
-          : '0 0 0'}; --windowWidth: {$windowWidth}"
+          : '180 180 180'}; --windowWidth: {$windowWidth}"
       />
     {/each}
   </div>
