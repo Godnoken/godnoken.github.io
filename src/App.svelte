@@ -221,8 +221,8 @@
   }
 
   :global(svg) {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 
   @media (hover: hover) {
@@ -257,6 +257,18 @@
     .prev {
       padding: 0 5px 5px;
       font-size: 48px;
+    }
+
+    :global(svg) {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    :global(svg) {
+      width: 15px;
+      height: 15px;
     }
   }
 </style>

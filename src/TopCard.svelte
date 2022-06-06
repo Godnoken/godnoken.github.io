@@ -199,11 +199,6 @@
       padding: 4px 12px 0;
       font-size: 14px;
     }
-
-    :global(svg) {
-      height: 15px;
-      width: 15px;
-    }
   }
 
   @media (max-width: 300px) {

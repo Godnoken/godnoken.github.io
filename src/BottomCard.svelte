@@ -136,13 +136,11 @@
   }
 
   :global(.go-back) {
-    position: absolute;
-    bottom: 24px;
-    width: 300px;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    justify-self: center;
     border: solid var(--accent-color) 3px;
     border-radius: 6px;
     font-size: 34px;
@@ -178,7 +176,6 @@
 
     :global(.go-back) {
       width: 80%;
-      height: 75px;
     }
   }
 </style>

@@ -25,6 +25,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "node-sass": "^7.0.1",
     "sirv-cli": "^2.0.0"
   }
