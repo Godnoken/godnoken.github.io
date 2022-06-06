@@ -194,12 +194,13 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    row-gap: 10px;
   }
 
   .bottom-form {
     grid-area: 2;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 1.8fr 1fr;
   }
 
   .message {
