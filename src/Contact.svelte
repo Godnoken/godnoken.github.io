@@ -166,12 +166,14 @@
     align-self: center;
     row-gap: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     color: var(--accent-color);
   }
 
-  .input {
+  .input, .message {
+    width: 500px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,6 +228,7 @@
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px var(--secondary-color) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
   }
 
   input:-webkit-autofill {
@@ -301,9 +304,14 @@
   }
 
   @media (max-width: 650px) {
+    .input-container {
+      font-size: 20px;
+    }
+
     .input {
       min-width: 240px;
       width: 240px;
+      height: 60px;
       font-size: 12px;
     }
 

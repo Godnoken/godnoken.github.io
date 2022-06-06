@@ -419,8 +419,8 @@
   }
 
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     stroke: var(--accent-color);
     fill: var(--accent-color);
   }
@@ -474,6 +474,11 @@
   @media (max-width: 950px) {
     .title {
       font-size: 30px;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
     }
   }
 
