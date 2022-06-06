@@ -66,7 +66,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 14px;
+    margin: 7.5%;
     border-radius: 10px;
     overflow: hidden;
     background-color: var(--secondary-color);
@@ -129,7 +129,7 @@
   }
 
   .title {
-    font-size: 48px;
+    font-size: var(--large-text);
     font-weight: 1000;
     color: rgb(var(--color));
     user-select: none;
@@ -142,8 +142,9 @@
     align-self: center;
     justify-self: center;
     border: solid var(--accent-color) 3px;
+    padding: 10px 0;
     border-radius: 6px;
-    font-size: 34px;
+    font-size: var(--large-text);
     color: var(--accent-color);
   }
 
@@ -166,12 +167,8 @@
   @media (max-width: 950px) {
     .bottom-card {
       height: 85%;
-      margin: 0;
+      margin: 3%;
       align-self: center;
-    }
-
-    .title {
-      font-size: 20px;
     }
 
     :global(.go-back) {

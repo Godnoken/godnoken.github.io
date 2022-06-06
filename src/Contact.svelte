@@ -151,6 +151,7 @@
     row-gap: 18px;
     color: var(--accent-color);
     z-index: 1;
+    font-size: var(--medium-text);
   }
 
   .contact-form {
@@ -165,15 +166,18 @@
     justify-content: center;
     align-self: center;
     row-gap: 10px;
-    text-align: center;
-    font-size: 28px;
     font-weight: bold;
     color: var(--accent-color);
   }
 
+  label {
+    text-align: start;
+    margin-left: 12px;
+  }
+
   .input, .message {
-    width: 500px;
-    height: 100px;
+    width: clamp(420px, 35 * (1vw + 1vh) / 2, 2000px);
+    height: clamp(60px, 9 * (1vw + 1vh) / 2, 400px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,6 +185,7 @@
     column-gap: 12px;
     padding: 10px 24px;
     border-radius: 12px;
+    font-size: var(--medium-text);
     background-color: var(--secondary-color);
     color: var(--accent-color);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -237,7 +242,7 @@
   }
 
   .send-button {
-    width: max-content;
+    width: clamp(100px, 15 * (1vw + 1vh) / 2, 1000px);
     justify-self: center;
     column-gap: 12px;
     padding: 10px 24px;
@@ -256,7 +261,7 @@
   }
 
   .title {
-    font-size: 48px;
+    font-size: var(--large-text);
     align-self: flex-end;
     text-align: center;
   }
@@ -286,6 +291,7 @@
     color: var(--accent-color);
     border: 3px solid var(--accent-color);
     border-radius: 6px;
+    font-size: var(--large-text);
   }
 
   @keyframes movingGlobe {

@@ -39,7 +39,7 @@
               ><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                 alt="HTML"
-                class="icon"
+                class="big-icon"
               /></a
             >
             <a
@@ -49,7 +49,7 @@
               ><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                 alt="CSS"
-                class="icon"
+                class="big-icon"
               /></a
             >
             <a
@@ -59,7 +59,7 @@
               ><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                 alt="JavaScript"
-                class="icon"
+                class="big-icon"
               /></a
             >
             <a
@@ -67,7 +67,7 @@
               href="https://www.typescriptlang.org/"
               target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                 alt="TypeScript"
               /></a
@@ -79,7 +79,7 @@
               ><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
                 alt="C"
-                class="icon"
+                class="big-icon"
               /></a
             >
             <a
@@ -89,7 +89,7 @@
               ><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
                 alt="C#"
-                class="icon"
+                class="big-icon"
               /></a
             >
           </div>
@@ -102,32 +102,34 @@
               href="https://tailwindcss.com/"
               target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                 alt="TailwindCSS"
               /></a
             >
             <a title="React" href="https://reactjs.org/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                 alt="React"
               /></a
             >
             <a title="Angular" href="https://angular.io/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
                 alt="Angular"
               /></a
             >
             <a title="SASS" href="https://sass-lang.com/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
                 alt="SASS"
               /></a
             >
+            <a title="PUG" href="https://pugjs.org/api/getting-started.html" target="_blank"><svg class="big-icon" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><circle fill="#F2F2F2" cx="128" cy="128" r="128"/><path d="M166 204c-25 9-53 9-78 0-2-1-4-4-4-6v-6c0-3 2-4 4-3 25 9 53 9 78 0 3-1 5 0 5 3v6c0 2-2 5-5 6Z" fill="#ED1C24"/><path d="M166 196a84 84 0 0 1-78 0c-2-1-4-5-4-8v-8c0-4 2-5 4-4 25 13 53 13 78 0 3-1 5 0 5 4v8c0 3-2 7-5 8Z" fill="#C1272D"/><g transform="translate(118 203)"><circle fill="#C1272D" cx="9.6" cy="3.9" r="3.6"/><circle fill="#FF931E" cx="9.6" cy="3.4" r="3.1"/><circle fill="#FFB81E" cx="10.5" cy="4.5" r="1.1"/><circle fill="#FF931E" cx="9.6" cy="15.5" r="9.6"/><circle fill="#FFB81E" cx="9.6" cy="15.6" r="8.6"/><path d="m12 13 1 2-1 2-2 1H9v2H7v-8h3l2 1Zm-1 3v-2H9v2h2Z" fill="#FF931E"/></g><path d="M205 140c2 32-32 61-77 61s-80-29-77-61c2-32 37-58 77-58s75 26 77 58Z" fill="#F7BD89"/><path d="M128 78c-43 0-82 29-75 75 2 4 4 15 16 25 4 2 10 5 13 3 7-5-6-20 9-33 8-6 19-11 37-11 17 0 28 5 37 11h-1c15 13 2 28 9 33 3 2 10-1 13-3 12-10 14-21 16-25 7-46-32-75-74-75Z" fill="#FBD5A0"/><path d="M164 153a48 48 0 0 0-73 0c-7 9-4 13-4 21 0 31 10 22 18 26 7 4 15 2 23 2s15 2 23-2c7-4 18 5 18-26 0-8 2-12-5-21Z"/><g transform="translate(62 124)"><circle fill="#F7BD89" cx="13" cy="15.5" r="13"/><circle cx="14.2" cy="13.3" r="13"/><circle fill="#FFF" cx="17.5" cy="7.4" r="3.4"/></g><g transform="translate(166 124)"><circle fill="#F7BD89" cx="14" cy="15.5" r="13"/><circle cx="13.2" cy="13.3" r="13"/><circle fill="#FFF" cx="16.5" cy="7.4" r="3.4"/></g><path d="M100 89s-44 8-45 60c0 1-1 2-2 1l-1-1-1-13 2-28 18-14 16-7 13 2Zm55 0s44 8 46 60l1 1 2-1 1-13-2-28-19-14-16-7-13 2Z" fill="#F7BD89"/><path d="M127 183v-27h2v27l10 3 6 2-17-2-17 2 6-2 10-3Zm13-36c1 4-4 9-12 9-9 0-14-5-13-9 2-3 7-4 13-4 5 0 10 1 12 4Z" fill="#4D4D4D"/><path d="M100 89s-51 7-47 59c0 2-10-11-19-15-8-5-7-18-7-18s-1-24 33-31c33-7 40 5 40 5Zm55 0s52 7 47 59c0 2 11-11 19-15 8-5 8-18 8-18s0-24-33-31-41 5-41 5Z"/><path d="M128 126c-16 0-33 16-29 14 6-3 10-9 29-9s22 6 29 9c3 2-13-14-29-14Z" fill="#F7BD89"/><path d="M128 119c-13 0-25 12-22 11 4-3 11-7 22-7s17 4 22 7c2 1-10-11-22-11Zm0-39c-14 0-28 8-25 7 6-1 12-4 25-4 12 0 19 3 24 4 3 1-11-7-24-7Z" fill="#F7BD89"/><path d="M131 146s-1 2-3 2-4-2-3-2c0-1 1-2 3-2l3 2Z" fill="gray"/></svg>
+            </a>
           </div>
         </div>
         <div class="back-end box">
@@ -138,34 +140,40 @@
               href="https://firebase.google.com/"
               target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
                 alt="Firebase"
               /></a
             >
             <a title="MongoDB" href="https://www.mongodb.com/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                 alt="MongoDB"
               /></a
             >
             <a title="SocketIO" href="https://socket.io/" target="_blank"
-              ><svg class="icon" viewBox="0 0 128 128">
-                <path d="M63.951.001C28.696.001.001 28.696.001 63.951s28.695 63.95 63.95 63.95 63.95-28.695 63.95-63.95S99.206.001 63.95.001zm0 10.679c29.484 0 53.272 23.787 53.272 53.271 0 29.485-23.788 53.272-53.272 53.272-29.484 0-53.272-23.787-53.272-53.272 0-29.484 23.788-53.271 53.272-53.271z"></path><path d="M48.39 60.716c14.004-11.44 27.702-23.278 42.011-34.384-7.505 11.533-15.224 22.913-22.729 34.445-6.437.03-12.875.03-19.282-.061zM60.228 67.092c6.468 0 12.905 0 19.342.092-14.095 11.38-27.732 23.309-42.071 34.384 7.505-11.533 15.224-22.943 22.729-34.476z"></path>
-                </svg></a
+              ><svg class="big-icon svg-color" viewBox="0 0 128 128">
+                <path
+                  d="M63.951.001C28.696.001.001 28.696.001 63.951s28.695 63.95 63.95 63.95 63.95-28.695 63.95-63.95S99.206.001 63.95.001zm0 10.679c29.484 0 53.272 23.787 53.272 53.271 0 29.485-23.788 53.272-53.272 53.272-29.484 0-53.272-23.787-53.272-53.272 0-29.484 23.788-53.271 53.272-53.271z"
+                /><path
+                  d="M48.39 60.716c14.004-11.44 27.702-23.278 42.011-34.384-7.505 11.533-15.224 22.913-22.729 34.445-6.437.03-12.875.03-19.282-.061zM60.228 67.092c6.468 0 12.905 0 19.342.092-14.095 11.38-27.732 23.309-42.071 34.384 7.505-11.533 15.224-22.943 22.729-34.476z"
+                />
+              </svg></a
             >
             <a title="NodeJS" href="https://nodejs.org/en/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                 alt="NodeJS"
               /></a
             >
             <a title="Express" href="https://expressjs.com/" target="_blank"
-              ><svg class="icon" viewBox="0 0 128 128">
-                <path d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21 6.45-8.55 12.8-16.67 18.8-25.11 2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08zm5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57-15-.12-25.78 11.02-26.43 27.57z"></path>
-                </svg></a
+              ><svg class="big-icon svg-color" viewBox="0 0 128 128">
+                <path
+                  d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21 6.45-8.55 12.8-16.67 18.8-25.11 2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08zm5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57-15-.12-25.78 11.02-26.43 27.57z"
+                />
+              </svg></a
             >
           </div>
         </div>
@@ -174,28 +182,28 @@
           <div class="icon-container left-icons">
             <a title="Figma" href="https://www.figma.com/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
                 alt="Figma"
               /></a
             >
             <a title="Git" href="https://git-scm.com/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                 alt="Git"
               /></a
             >
             <a title="Webpack" href="https://webpack.js.org/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
                 alt="Webpack"
               /></a
             >
             <a title="GSAP" href="https://greensock.com/gsap/" target="_blank"
               ><svg
-                class="icon"
+                class="big-icon"
                 viewBox="-2.1 -2.3 314.9 359.3"
                 xmlns="http://www.w3.org/2000/svg"
                 ><path
@@ -332,17 +340,22 @@
             >
             <a title="NPM" href="https://www.npmjs.com/" target="_blank"
               ><img
-                class="icon"
+                class="big-icon"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
                 alt="NPM"
               /></a
             >
             <a title="Unity" href="https://unity.com/" target="_blank"
-              ><svg class="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26.531 25.599l-5.728-9.599 5.728-9.599 2.803 9.599zM13.864 24.667l-7.197-7.068h11.469l5.728 9.599zM13.864 7.197l10-2.531-5.728 9.599h-11.605c0 0.136 7.333-7.068 7.333-7.068zM28.531 0l-13.061 3.333-2 3.333h-3.871l-9.599 9.333 9.599 9.333h3.871l1.864 3.333 13.068 3.333 3.463-12.667-1.864-3.333 2-3.333z"/>
+              ><svg
+                class="big-icon svg-color"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.531 25.599l-5.728-9.599 5.728-9.599 2.803 9.599zM13.864 24.667l-7.197-7.068h11.469l5.728 9.599zM13.864 7.197l10-2.531-5.728 9.599h-11.605c0 0.136 7.333-7.068 7.333-7.068zM28.531 0l-13.061 3.333-2 3.333h-3.871l-9.599 9.333 9.599 9.333h3.871l1.864 3.333 13.068 3.333 3.463-12.667-1.864-3.333 2-3.333z"
+                />
               </svg>
-              </a
-            >
+            </a>
           </div>
         </div>
       </div>
@@ -401,7 +414,7 @@
     row-gap: 8px;
     margin: 0 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: var(--medium-text);
   }
 
   .icon-container {
@@ -415,14 +428,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-      transition: 0.6s;
-  }
-
-  .icon {
-    width: 70px;
-    height: 70px;
-    stroke: var(--accent-color);
-    fill: var(--accent-color);
+    transition: 0.6s;
   }
 
   .base {
@@ -445,7 +451,7 @@
   }
 
   .title {
-    font-size: 48px;
+    font-size: var(--large-text);
     align-self: flex-end;
     text-align: center;
   }
@@ -475,21 +481,11 @@
     .title {
       font-size: 30px;
     }
-
-    .icon {
-      width: 40px;
-      height: 40px;
-    }
   }
 
   @media (max-width: 450px) {
     .title {
       font-size: 22px;
-    }
-
-    .icon {
-      width: 25px;
-      height: 25px;
     }
 
     .base,
@@ -515,13 +511,6 @@
 
     .right-icons {
       align-self: flex-end;
-    }
-  }
-
-  @media (max-width: 300px) {
-    .icon {
-      width: 15px;
-      height: 15px;
     }
   }
 </style>

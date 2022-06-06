@@ -80,6 +80,7 @@
     overflow-y: scroll;
     border-bottom: 1px solid rgba(165, 165, 165, 0.767);
     padding: 6px;
+    font-size: var(--small-text);
   }
 
   .description::-webkit-scrollbar {
@@ -99,7 +100,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: var(--large-text);
   }
 
   .tech-stacks {
@@ -123,7 +124,7 @@
     align-items: center;
     border: solid var(--accent-color) 1px;
     border-radius: 6px;
-    font-size: 22px;
+    font-size: var(--medium-text);
     text-decoration: none;
     color: var(--accent-color);
   }

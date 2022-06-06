@@ -26,7 +26,7 @@
     style="--mouseX: {$mouseX + 'px'}; --mouseY: {$mouseY + 'px'}; --bgColor: {$darkMode ? "#4b2624" : "whitesmoke"}"
   >
     <div class="content">
-      <h1 class="title">Who am I?</h1>
+      <h1 class="title">Sebastian Öjefors</h1>
       <div class="inner-content">
         <p>Software developer. Gamer. The lad you want to have a beer with. Family guy. Globetrotter. Occasional fitness addict</p>
         <p>I'm from the great north, the land of vikings & fika. Hence 'Globetrotter' - I won't have an issue with relocating</p>
@@ -83,12 +83,16 @@
     row-gap: 40px;
     border-radius: 10px;
     padding: 10px 140px;
-    font-size: 24px;
+    font-size: var(--medium-text);
     overflow-y: auto;
   }
 
+  p {
+    margin: auto 0;
+  }
+
   .title {
-    font-size: 48px;
+    font-size: var(--large-text);
     align-self: flex-end;
     text-align: center;
   }
@@ -120,6 +124,12 @@
   @keyframes movingGlobe {
     100% {
       transform: scale(calc(var(--size) * (var(--windowWidth) / 100)));
+    }
+  }
+
+  @media (min-width: 2600px) {
+    .inner-content {
+      padding: 10px 400px;
     }
   }
 

@@ -7,6 +7,7 @@
   import MyLibraryCard from "./MyLibraryCard.svelte";
   import BlogCard from "./BlogCard.svelte";
   import TicTacToeCard from "./TicTacToeCard.svelte";
+  import WindowsCard from "./WindowsCard.svelte";
   import Tech from "./Tech.svelte";
   import Me from "./Me.svelte";
   import Contact from "./Contact.svelte";
@@ -46,11 +47,11 @@
   }
 
   function carousel(index) {
-    if (index > 4) {
+    if (index > 5) {
       $currentIndex = 1;
     }
     if (index < 1) {
-      $currentIndex = 4;
+      $currentIndex = 5;
     }
 
     for (let i = 0; i < dotElements.length; i++) {
@@ -97,6 +98,7 @@
     <ForumCard />
     <TicTacToeCard />
     <BlogCard />
+    <WindowsCard />
 
     <div class="prev" on:click={() => moveCarouselByArrows(-1)}>&#10094;</div>
     <div class="next" on:click={() => moveCarouselByArrows(1)}>&#10095;</div>
@@ -105,6 +107,7 @@
       <div on:click={() => moveByDots(2)} class="dot" />
       <div on:click={() => moveByDots(3)} class="dot" />
       <div on:click={() => moveByDots(4)} class="dot" />
+      <div on:click={() => moveByDots(5)} class="dot" />
     </div>
   </div>
   <div class="bottom">
@@ -115,7 +118,7 @@
   <div class="icon-container">
     <svg
     on:click={handleColorTheme}
-    class="icon"
+    class="small-icon dark-light-mode-icon icon svg-color"
     viewBox="0 0 24 24"
   >
     <path
@@ -128,7 +131,7 @@
       target="_blank"
     >
       <svg
-        class="codewars-svg icon"
+        class="codewars-svg small-icon icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         ><path
@@ -141,7 +144,7 @@
       title="Email"
       target="_blank"
     >
-      <svg class="icon" viewBox="0 0 24 24">
+      <svg class="small-icon icon svg-color" viewBox="0 0 24 24">
         <path
           d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
         />
@@ -149,7 +152,7 @@
     </a>
     <a href="https://github.com/Godnoken" title="Github" target="_blank">
       <svg
-        class="icon"
+      class="small-icon icon svg-color"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
         ><g
@@ -179,6 +182,13 @@
     --primary-color: #{$light-primary-color};
     --secondary-color: #{$light-secondary-color};
     --accent-color: #{$light-accent-color};
+
+    --small-text: clamp(12px, 1.1 * (1vw + 1vh) / 2, 32px);
+    --medium-text: clamp(12px, 1.8 * (1vw + 1vh) / 2, 72px);
+    --large-text: clamp(14px, 3 * (1vw + 1vh) / 2, 100px);
+
+    --small-icon: clamp(15px, 3 * (1vw + 1vh) / 2, 100px);
+    --big-icon: clamp(15px, 5 * (1vw + 1vh) / 2, 140px);
   }
 
   :global(.darkMode) {
@@ -217,8 +227,8 @@
   }
 
   .dot {
-    height: 18px;
-    width: 18px;
+    height: var(--medium-text);
+    width: var(--medium-text);
     border-radius: 100%;
     background-color: white;
     cursor: pointer;
@@ -240,7 +250,7 @@
     top: 50%;
     padding: 12px 16px 16px;
     color: var(--accent-color);
-    font-size: 72px;
+    font-size: var(--big-icon);
     transition: 0.6s ease;
     user-select: none;
   }
@@ -273,24 +283,31 @@
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
-  .icon {
-    width: 25px;
-    height: 25px;
-    fill: var(--accent-color);
+  .dark-light-mode-icon {
+    border-bottom: 2px solid rgba(165, 165, 165, 0.76);
     cursor: pointer;
   }
 
   .codewars-svg {
+    fill: var(--accent-color);
+    margin-top: 6px;
     border-radius: 100%;
   }
 
-  :global(svg) {
-    height: 40px;
-    width: 40px;
+  :global(.svg-color) {
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
   }
 
-  :global(.icon) {
-    fill: var(--accent-color);
+  :global(.big-icon) {
+    height: var(--big-icon);
+    width: var(--big-icon);
+    cursor: pointer;
+  }
+
+  :global(.small-icon) {
+    height: var(--small-icon);
+    width: var(--small-icon);
   }
 
   :global(.icon:hover) {
@@ -323,24 +340,6 @@
     .prev {
       padding: 0 5px 5px;
       font-size: 48px;
-    }
-
-    :global(svg) {
-      height: 25px;
-      width: 25px;
-    }
-
-    .icon {
-    width: 15px;
-    height: 15px;
-    fill: var(--accent-color);
-  }
-  }
-
-  @media (max-width: 300px) {
-    :global(svg) {
-      width: 15px;
-      height: 15px;
     }
   }
 </style>
