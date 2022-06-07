@@ -118,7 +118,7 @@
   <div class="icon-container">
     <svg
     on:click={handleColorTheme}
-    class="small-icon dark-light-mode-icon icon svg-color"
+    class="small-icon dark-light-mode-icon icon-hover svg-color"
     viewBox="0 0 24 24"
   >
     <path
@@ -131,7 +131,7 @@
       target="_blank"
     >
       <svg
-        class="codewars-svg small-icon icon"
+        class="codewars-svg small-icon icon-hover"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         ><path
@@ -144,7 +144,7 @@
       title="Email"
       target="_blank"
     >
-      <svg class="small-icon icon svg-color" viewBox="0 0 24 24">
+      <svg class="small-icon icon-hover svg-color" viewBox="0 0 24 24">
         <path
           d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
         />
@@ -152,7 +152,7 @@
     </a>
     <a href="https://github.com/Godnoken" title="Github" target="_blank">
       <svg
-      class="small-icon icon svg-color"
+      class="small-icon icon-hover svg-color"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
         ><g
@@ -310,7 +310,7 @@
     width: var(--small-icon);
   }
 
-  :global(.icon:hover) {
+  :global(.icon-hover:hover) {
     transition: opacity 0.5s;
     opacity: 0.5;
   }
