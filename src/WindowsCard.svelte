@@ -7,7 +7,7 @@
     let description: string = "<span style='display: flex; justify-content: center'>Windows 98 flashback</span> <br> Hosted on <a href='https://blog.heroku.com/app_sleeping_on_heroku' target='_blank'>Heroku</a>. Please let the website boot up for 15~ seconds. <br><br> Small project to introduce myself to NodeJS, Express, Pug & persistant data with Mongoose & MongoDB. <br><br> I never used a persistant database on my projects before. Great feeling accomplishing it, not so great feeling seeing trolls posting inappropriate things from time to time. <br><br> Leave a comment if you'd like!";
     let codeUrl: string = "https://github.com/Godnoken/express-minimessageboard";
     let liveUrl: string = "http://express-minimessageboard.herokuapp.com/";
-    let elementIndex = 5;
+    let elementIndex = 6;
 </script>
 
 
