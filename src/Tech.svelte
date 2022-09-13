@@ -157,7 +157,7 @@
             <a class="big-icon icon-hover" href="https://greensock.com/gsap/" target="_blank"
               >{@html gsapIcon}
             </a>
-            <a class="big-icon icon-hover" href="https://unity.com/" target="_blank"
+            <a class="big-icon icon-hover codewars-svg" href="https://unity.com/" target="_blank"
               >{@html unityIcon}
             </a>
           </div>
