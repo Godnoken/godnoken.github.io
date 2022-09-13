@@ -9,6 +9,7 @@
   import TicTacToeCard from "./TicTacToeCard.svelte";
   import WindowsCard from "./WindowsCard.svelte";
   import WeatherCard from "./WeatherCard.svelte";
+  import MinecraftCard from "./MinecraftCard.svelte";
   import Tech from "./Tech.svelte";
   import Me from "./Me.svelte";
   import Contact from "./Contact.svelte";
@@ -48,11 +49,11 @@
   }
 
   function carousel(index) {
-    if (index > 6) {
+    if (index > 7) {
       $currentIndex = 1;
     }
     if (index < 1) {
-      $currentIndex = 6;
+      $currentIndex = 7;
     }
 
     for (let i = 0; i < dotElements.length; i++) {
@@ -101,6 +102,7 @@
     <BlogCard />
     <WindowsCard />
     <WeatherCard />
+    <MinecraftCard />
 
     <div class="prev" on:click={() => moveCarouselByArrows(-1)}>&#10094;</div>
     <div class="next" on:click={() => moveCarouselByArrows(1)}>&#10095;</div>
@@ -111,6 +113,7 @@
       <div on:click={() => moveByDots(4)} class="dot" />
       <div on:click={() => moveByDots(5)} class="dot" />
       <div on:click={() => moveByDots(6)} class="dot" />
+      <div on:click={() => moveByDots(7)} class="dot" />
     </div>
   </div>
   <div class="bottom">
