@@ -17,7 +17,7 @@
   let codeUrl: string =
     "https://github.com/Godnoken/express-minecraft-inventory";
   let liveUrl: string = "https://express-minecraftinventory.up.railway.app/";
-  let elementIndex = 4;
+  let elementIndex = 3;
 </script>
 
 <TopCard {image} {title} {description} {elementIndex} {codeUrl} {liveUrl}>
